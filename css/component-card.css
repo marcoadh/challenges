@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1080px;
+    width: 1080px;
+}
+
+/* ----------------------------------Carta Izquierda */
+
+.card-left {
+    display: flex;
+    align-items: center;
+}
+.card-left-sub {
+    margin: auto 60px;
+}
+
+.card-left-sub-body {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+.card-left-sub-body p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    padding-right: 60px;
+    margin-top: 30px;
+}
+
+.card-left-footer{
+    display:  flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+.footer-details {
+    color: hsl(0, 0%, 100%);
+}
+
+.footer-details p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 12px;
+    margin-right: 65px;
+    margin-top: 7px;
+}
+
+.footer-details h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+    
+
+/* ----------------------------------Carta Derecha */
+.card-right {
+    background: url("../img/image-header-desktop.jpg");
+    height: 446px;
+}
+
+.card-right-image {
+    background: hsla(277, 67%, 41%, 0.486);
+    height: 100%;
+}
+
+.card-left, .card-right {
+    width: 50%;
+}
+
+
+@media screen and (max-width: 450px){
+    main {
+        height: 100%;
+    }
+
+    .card{
+        flex-direction: column-reverse;
+        min-width: 350;
+        width: 350;
+        margin: 20px;
+    }
+
+    /* Sección Derecha */
+    .card-right {
+        background: url("../img/image-header-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: none;
+        height: 250px;
+        width: 100%;
+    }
+
+    /* Sección Izquierda */
+    .card-left {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .card-left-sub {
+        margin: auto 0;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 26px;
+        padding: 0 18px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .card-left-sub-body p {
+        padding: 0 45px;
+        font-size: 12px;
+
+    }
+
+    .card-left-footer{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-details{
+        margin-top: 18px;
+    }
+
+    .footer-details h2 {
+        margin-bottom: 5px;
+    }
+
+    .footer-details p {
+        margin: 0;
+    }
+}
