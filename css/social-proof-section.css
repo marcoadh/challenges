@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    /* Primary */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /* Neutral */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    /* 400, 500, 700 */
+    font-family: 'Spartan', sans-serif; 
+}
+
+.flex {
+    display: flex;
+    height: 100vh;
+    background-image: url('../img/social-proof-section/bg-pattern-top-desktop.svg'), url('../img/social-proof-section/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor {
+    margin: auto;
+    max-width: 1200px;
+    height: 80%;
+}
+
+/* Inicio - Estilos de cabecera */
+
+.cabecera {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.info__seccion {
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.info__titulo {
+    color: var(--very-dark-magenta);
+    font-size: 2.7rem;
+    grid-column: 1/4;
+}
+
+.info__texto {
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: var(--dark-grayish-magenta);
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.puntaje__seccion {
+    grid-column: 7/13;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.puntaje__grupo {
+    width: 450px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--light-grayish-magenta);
+    display: flex;
+    align-items: center;
+}
+
+.puntaje__seccion .puntaje__grupo:nth-child(1){
+    align-self: flex-start;
+}
+
+.puntaje__seccion .puntaje__grupo:nth-child(2){
+    align-self: center;
+}
+
+
+.puntaje__seccion .puntaje__grupo:nth-child(3){
+    align-self: flex-end;
+}
+
+
+.puntaje__estrellas {
+    margin: 0 30px;
+}
+
+.puntaje__descripcion {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+/* Fin - Estilos de cabecera */
+
+/* Inicio - Estilos de comentarios */
+
+.comentario {
+    display: flex;
+    height: 300px;
+    margin-top: 40px;
+}
+
+.comentario__bloque {
+    border-radius: 10px;
+    background-color: var(--very-dark-magenta);
+    height: 250px;
+    margin: 0 20px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+}
+
+.comentario .comentario__bloque:nth-child(1) {
+    align-self: flex-start;
+}
+
+.comentario .comentario__bloque:nth-child(2) {
+    align-self: center;
+}
+
+.comentario .comentario__bloque:nth-child(3) {
+    align-self: flex-end;
+}
+
+.foto {
+    grid-column: 1/2;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.comentario__textos {
+    grid-column: 2/7;
+    margin-left: 10px;
+}
+
+.comentario__nombre {
+    color: var(--white);
+    margin: 5px;
+}
+
+.verified {
+    color: var(--soft-pink);
+    margin: 5px;
+}
+
+.comentario__parrafo {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Fin - Estilos de comentarios */
+
+/* Responsive */
+
+@media screen and (max-width: 460px) {
+    /* Sección Cabecera */
+    .info__seccion{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .puntaje__seccion{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        margin-top: 20px;
+    }
+
+    .info__titulo, .info__texto {
+        grid-column: 1/-1;
+    }
+    
+    .puntaje__grupo {
+        width: 90%;
+        margin: 10px 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .puntaje__seccion .puntaje__grupo:nth-child(1){
+        align-self: center;
+    }
+    
+    .puntaje__seccion .puntaje__grupo:nth-child(2){
+        align-self: center;
+    }
+    
+    .puntaje__seccion .puntaje__grupo:nth-child(3){
+        align-self: center;
+    }
+
+    .puntaje__estrellas {
+        margin: 0 15px;
+    }
+
+    .puntaje__descripcion {
+        font-size: 0.8rem;
+    }
+
+
+
+    /* Sección Comentarios */
+
+    .comentario {
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .comentario__bloque {
+        margin: 20px;
+    }
+}
