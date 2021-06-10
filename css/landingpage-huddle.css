@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+main {
+    background: url('../img/landing-page-huddle/bg-desktop.svg');
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: var(--violet);
+    height: 100vh;
+    display: flex;
+}
+
+.contenedor {
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.left__image {
+    width: 100%;
+}
+
+.right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.right__title {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.right__text {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+    padding-right: 15px;
+    text-align: justify;
+}
+
+.right__button {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: var(--violet);
+    width: 150px;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.521);
+    cursor: pointer;
+}
+
+.right__button:hover {
+    color: #fff;
+    transition: 0.5s;
+    background-color: var(--soft-magenta);
+}
+
+/* Sección Footer */
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.social a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social a:hover {
+    transition: 0.5s;
+    color: var(--soft-magenta);
+    border: 2px solid var(--soft-magenta);
+}
+
+/* Design Responsive */
+
+@media screen and (max-width: 460px){
+
+    main {
+        height: 100%;
+        background: url('../img/landing-page-huddle/bg-mobile.svg');
+        background-size: cover;
+        background-color: var(--violet);
+    }
+
+    .contenedor {
+        margin: 30px;
+    }
+
+    .header__logo {
+        width: 150px;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+    
+    .left {
+        margin: 20px 0;
+    }
+
+    .right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .right__title {
+        font-size: 21px;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .right__text {
+        padding: 0;
+        font-size: 16px;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .right__button {
+        width: 190px;
+        margin: 15px 0;
+        padding: 10px;
+    }
+
+    .social {
+        justify-content: center;
+        margin: 25px 0;
+    }
+
+    .social a {
+        margin: 0;
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        margin: 0 5px;
+    }
+}
