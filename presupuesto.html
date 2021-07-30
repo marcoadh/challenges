@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/presupuesto.css">
+   <title>Aplicación de Presupuesto</title>
+</head>
+
+<body onload="appPresupuesto()">
+   <div class="cabecero">
+      <div class="presupuesto">
+         <div class="presupuesto_titulo">Presupuesto Disponible</div>
+
+         <div class="presupuesto_valor" id="presupuesto"></div>
+
+         <div class="presupuesto_ingreso limpiarEstilos">
+            <div class="presupuesto_ingreso--texto">Ingresos</div>
+            <div class="derecha limpiarEstilos">
+               <div class="presupuesto_ingreso--valor" id="ingresos"></div>
+               <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+            </div>
+         </div>
+
+         <div class="presupuesto_egreso limpiarEstilos">
+            <div class="presupuesto_egreso--texto">Egresos</div>
+            <div class="derecha limpiarEstilos">
+               <div class="presupuesto_egreso--valor" id="egresos"></div>
+               <div class="presupuesto_egreso--porcentaje" id="porcentaje"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <form id="formulario" onsubmit="return false;">
+      <div class="agregar">
+         <div class="agregar_contenedor">
+            <select class="agregar_tipo" id="tipo">
+               <option value="ingreso">Ingresos</option>
+               <option value="egreso">Egresos</option>
+            </select>
+            <input type="text" class="agregar_descripcion" placeholder="Agregar Descripción" id="descripcion">
+            <input type="number" class="agregar_valor" placeholder="Valor" id="valor" step="any">
+            <button class="agregar_btn" onclick="agregar()">
+               Agregar
+            </button>
+         </div>
+      </div>
+   </form>
+
+   <div class="contenedor limpiarEstilos">
+      <div class="ingreso">
+         <h2 class="ingreso_titulo">Ingresos</h2>
+         <div id="lista-ingresos">
+         </div>
+      </div>
+      
+      <div class="egreso">
+         <h2 class="egreso_titulo">Egresos</h2>
+         <div id="lista-egresos">
+         </div>
+      </div>
+   </div>
+
+   <script src="js/presupuesto/Dato.js"></script>
+   <script src="js/presupuesto/Egreso.js"></script>
+   <script src="js/presupuesto/Ingreso.js"></script>
+   <script src="js/presupuesto/app.js"></script>
+</body>
+
+</html>
