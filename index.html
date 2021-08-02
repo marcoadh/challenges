@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +13,26 @@
 </head>
 <body>
     <main>
-        <div class="container">
-            <div class="container-buttons">
-                <h2>Ruta de Desafíos</h2>
-                <a href="component-card.html" target="_blank"> Desafío 1 - Card Component </a>
-                <a href="column-card.html" target="_blank"> Desafío 2 - Card Column </a>
-                <a href="person-card.html" target="_blank"> Desafío 3 - Card Person </a>
-                <a href="landingpage-huddle.html" target="_blank"> Desafío 4 - LandingPage Hiddle </a>
-                <a href="social-proof-section.html" target="_blank"> Desafío 5 - Social Section </a>
-                <a href="single-price.html" target="_blank"> Desafío 6 - Single Price </a>
-            </div>
+        <div class="cabecera">
+            <h1>Lista de Desafíos</h1>
+            <h2>Estos desafíos fueron realizados con HTML, CSS y JavaScript</h2>
+        </div>
+        
+        <div class="contenedor">
+            <h3>Desafíos de FrontendMentor</h3>
+            <div class="contenedor_desafios" id="frontend"></div>
+
+            <h3>Desafíos Propios</h3>
+            <div class="contenedor_propios" id="apps"></div>
         </div>
     </main>
+
+    <template id="template_carta">
+        <div class="carta">
+            <img>
+            <a></a>
+        </div>
+    </template>
+    <script src="js/app.js"></script>
 </body>
 </html>
